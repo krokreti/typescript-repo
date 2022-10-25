@@ -1,0 +1,2 @@
+# typescript-repo
+practicing typescript

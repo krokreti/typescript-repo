@@ -10,5 +10,9 @@ function combine(n1: number | string, n2: number | string | boolean) {
     return result;
   }
 
+//da pra criar um alias pro union type
+type Combinable = number | string;
+type Combinable_two = 'as-string' | 'as-number';
+
   const combinedAges = combine(30, 26)
   const combinedNames = combine('Max', 'Ana')

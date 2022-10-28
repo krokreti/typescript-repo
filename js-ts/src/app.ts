@@ -53,3 +53,22 @@ const somar = (...numeros: number[]) => {
         return currentResult + currentValue
     }, 0); //reduce faz uma operacao em cada elemento do array
 }
+
+//coloca nessa variaveis, os valores do array hobbies, respectivamente o valor do indice 0 e 1
+const [hobby1, hobby2] = hobbies;
+
+//criar um array exatamente igual ao hobbies
+const [...remainingHobbies] = hobbies;
+
+const pessoa = {
+    firstName: 'Davi',
+    age: 29
+}
+
+//copia exatamente os respectivos valores do objeto pra esses dois novos objetos com mesmo nome dos atributos do objeto
+//nao precisa estar na ordem, igual ao exemplo acima com arrays
+//os nomes dentro do {} preciosam ser os mesmos dos atributos!!!
+const { firstName, age } = pessoa;
+
+//quando coloca com : e um novo nome, este novo nome sobrescreve o nome do atributo  do objeto pessoa
+const { firstName: primeimro_nome, age: idade } = pessoa;

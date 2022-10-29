@@ -3,6 +3,9 @@ class Department {
     // name: string;
     //colocando valor default em um campo
     teste: string = 'Field';
+    //quando se declara com readonly, vc garante que esse valor nunca será alterado
+    //isso garante que só vai ser incializado uma vez e que nunca será alterado posteriormente, e garante segurança
+    private readonly idCarro: number;
     
     private employees:string[] = [];
 

@@ -7,7 +7,7 @@ class Department {
     //isso garante que só vai ser incializado uma vez e que nunca será alterado posteriormente, e garante segurança
     private readonly idCarro: number;
     
-    private employees:string[] = [];
+    protected employees:string[] = [];
 
     //construtor é executado quando um objeto/classe é criado
     //no construtor podemos colocar propriedades que queremos que sejam criadas e inicializadas (quando fizer isso, temos q especificar se são public ou private)
@@ -31,6 +31,30 @@ class Department {
     printEmployeeInformation() {
         console.log(this.employees.length)
         console.log(this.employees)
+    }
+}
+
+//no js nao há herança multipla
+class ITDepartment extends Department {
+    public admins: string[];
+    constructor(id: number, admins: string[]) {
+        super(id, 1, 'TI');
+        this.admins = admins;
+    }
+}
+
+class AccountDepartment extends Department {
+    constructor(id: number, private reports: string[]) {
+        super(id, 2, 'Account');
+    }
+
+    //override em um meodo de Departamento
+    addEmployee(name: string): void {
+        if(name === 'Davi') {
+            return;
+        }
+        //tive que mudar employees para protected para AccountDepartment ter acesso.
+        this.employees.push(name);
     }
 }
 

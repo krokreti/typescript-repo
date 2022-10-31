@@ -22,12 +22,15 @@ interface Person {
 //usa a interface como um tipo
 let user1: Person;
 
-user1= {
+user1 = {
     name: 'Davi',
     age: 29,
     greet(phrase) {
         console.log(phrase + " " + name)
     },
+    calculate(n1 = 0) { //atribuindo um valor default
+        return n1;
+    }
 };
 
 user1.greet("Olá")
